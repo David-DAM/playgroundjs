@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="template">Plantilla de Spring Boot Web Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-white font-sans">
+<div class="flex items-center justify-center h-screen">
+    <div class="bg-white p-12 rounded-2xl shadow-2xl w-full max-w-4xl text-center transform transition duration-500 hover:scale-105">
+        <!-- Language Selection -->
+        <div class="absolute top-5 right-5 flex items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1280px-Flag_of_Spain.svg.png"
+                 alt="Español" class="flag" onclick="changeLanguage('es')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="English"
+                 class="flag" onclick="changeLanguage('en')">
+        </div>
+
+        <!-- Main Content -->
+        <h1 data-i18n="template"
+            class="text-5xl font-extrabold mb-6 text-gray-900 hover:text-indigo-600 transition duration-300">Plantilla
+            de Spring Boot Web Pro</h1>
+
+        <p data-i18n="description" class="text-lg text-gray-600 mb-6 max-w-3xl mx-auto">
+            Esta plantilla de Spring Boot es una base robusta y segura para construir aplicaciones modernas. Incluye
+            Spring Security, JPA, PostgreSQL, Redis y Grafana Stack para monitoreo. La integración de pruebas modulares
+            garantiza un desarrollo ágil y eficiente. Además, ¡conéctate con tu cuenta de GitHub para pagar y acceder a
+            todo lo que necesitas!
+        </p>
+
+        <a data-i18n="look-video" href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank"
+           class="text-blue-600 underline mb-6 inline-block text-lg hover:text-blue-400 transition duration-300">
+            Mira el video donde hablo sobre esta plantilla y cómo usarla.
+        </a>
+
+        <!-- GitHub Button and Icon -->
+        <div id="github-button"
+             class="bg-blue-100 p-8 rounded-xl shadow-lg mb-8 transform transition duration-500 hover:scale-105">
+            <p data-i18n="connect-github" class="text-2xl font-semibold text-gray-800 mb-4">Conectar con GitHub</p>
+            <p data-i18n="proceed-payment" class="text-lg text-gray-700 mt-2 mb-4">Autentícate con tu cuenta de GitHub
+                para proceder con el pago de la plantilla. ¡Es rápido y sencillo!</p>
+            <button
+                    data-i18n="connect-github"
+                    id="login-btn"
+                    class="bg-black text-white px-6 py-3 rounded-lg button-hover gradient-button flex items-center justify-center space-x-2 transition duration-300 mx-auto"
+                    onclick="connectToGitHub()"
+            >
+                <i class="fab fa-github icon"></i> Conectar con GitHub
+            </button>
+
+        </div>
+
+        <p id="status" class="mt-4 text-lg text-gray-700"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

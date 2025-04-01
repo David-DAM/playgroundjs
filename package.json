@@ -1,0 +1,16 @@
+{
+  "name": "playgroundjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "davinchicoder/spring-boot-template/landing/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "dependencies": {
+    "axios": "^1.8.4",
+    "stripe": "^17.7.0",
+    "picocolors": "^1.0.0",
+    "express": "^4.19.2"
+  }
+}
