@@ -1,11 +1,11 @@
-const CLIENT_ID = "";
-const REDIRECT_URI = "";
-const LAMBDA_URL = "";
+const CLIENT_ID = "Ov23liL6cpiFgu0g7Tcr";
+const REDIRECT_URI = "https://davinchicoder.dev/plantilla/";
+const LAMBDA_URL = "https://ju5le5a56wdrtplwd4staw4nxi0uonvz.lambda-url.eu-west-3.on.aws/";
 
 const translations = {
     "template": {
-        "es": "Plantilla de Spring Boot Web Pro",
-        "en": "Spring Boot Web Pro Template"
+        "es": "Plantilla de Spring Boot Definitiva",
+        "en": "Spring Boot Ultimate Template"
     },
     "description": {
         "es": "Esta plantilla de Spring Boot incluye herramientas esenciales como Spring Security, JPA, PostgreSQL y Redis para crear aplicaciones robustas y seguras. También incluye un sistema de pruebas modular y una configuración de integración con Grafana Stack para monitoreo.",
