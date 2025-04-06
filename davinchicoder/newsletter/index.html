@@ -7,18 +7,40 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<header>
+    <div class="logo">
+        <a href="https://davinchicoder">DavinchiCoder</a>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav-links" id="nav">
+        <a data-i18n="home" href="https://davinchicoder">INICIO</a>
+        <a data-i18n="templates" href="https://davinchicoder/templates">PLANTILLAS</a>
+        <a data-i18n="consultancies" href="https://davinchicoder/consultancies">ASESORÍAS</a>
+        <a data-i18n="newsletter" href="https://davinchicoder/newsletter">NEWSLETTER</a>
+        <a data-i18n="gadgets" href="https://davinchicoder/gadgets">PERIFÉRICOS</a>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1280px-Flag_of_Spain.svg.png"
+             alt="Español" class="flag" onclick="changeLanguage('es')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
+             alt="English" class="flag" onclick="changeLanguage('en')">
+    </nav>
+</header>
 <div class="container">
     <h1>📰 DevSunday</h1>
-    <p>
+    <p data-i18n="description">
         Recibe cada domingo lo mejor del mundo tech, herramientas brutales, recursos, recomendaciones y más.
         100% útil, 0% spam.
     </p>
-    <input type="email" id="email" placeholder="Tu correo electrónico">
-    <br>
-    <button onclick="subscribe()">Suscribirme gratis</button>
-    <p class="success-message" id="message">
-        ✅ ¡Gracias por suscribirte!
-    </p>
+    <!-- End MailerLite Universal -->
+    <button data-i18n="click_here" class="ml-onclick-form" onclick="ml('show', 'z0x6lX', true)">
+        MOSTRAR FORMULARIO
+    </button>
+    <script src="script.js"></script>
 </div>
 
 <script src="script.js"></script>

@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page - DavinchiCoder</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>DavinchiCoder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header class="header">
-    <div class="profile">
-        <img src="images/profile.jpeg" alt="Foto de perfil" class="profile-img">
-        <h1 class="name">DavinchiCoder</h1>
-        <p class="description">Desarrollador apasionado, divulgador incansable y comprometido en ayudarte a crecer en el
-            mundo Tech.</p>
+<div class="lang-switcher">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1280px-Flag_of_Spain.svg.png"
+         alt="Español" class="flag" onclick="changeLanguage('es')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="English"
+         class="flag" onclick="changeLanguage('en')">
+</div>
+<section class="hero">
+    <div class="hero-content">
+        <img src="images/profile.webp" alt="Foto de DavinchiCoder"/>
+        <h1>DavinchiCoder</h1>
+        <p data-i18n="self_description">Desarrollador apasionado, divulgador incansable y comprometido en ayudarte a
+            crecer en el mundo del desarrollo</p>
+        <div class="socials">
+            <a href="https://www.youtube.com/@davinchicoder"><img
+                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg"
+                    alt="YouTube"/>
+            </a>
+            <a href="https://www.tiktok.com/@davinchicoder"><img
+                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok"/>
+            </a>
+            <a href="https://www.linkedin.com/in/david-linkdin/"><img
+                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+                    alt="LinkedIn"/>
+            </a>
+            <a href="https://github.com/David-DAM"><img
+                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"/>
+            </a>
+            <a href="https://discord.com/invite/kjeYDRzcZk"><img
+                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg"
+                    alt="Discord"/>
+            </a>
+        </div>
+        <div class="buttons">
+            <a data-i18n="templates" href="https://davinchicoder/templates">PLANTILLAS</a>
+            <a data-i18n="consultancies" href="https://davinchicoder/consultancies">ASESORÍAS</a>
+            <a data-i18n="newsletter" href="https://davinchicoder/newsletter">NEWSLETTER DEVSUNDAY</a>
+            <a data-i18n="gadgets" href="https://davinchicoder/gadgets">MIS PERIFÉRICOS</a>
+        </div>
     </div>
-</header>
-
-
-<section class="social-links">
-    <a href="https://www.youtube.com/@davinchicoder" class="social-icon youtube">YouTube</a>
-    <a href="https://www.tiktok.com/@davinchicoder" class="social-icon tiktok">TikTok</a>
-    <a href="https://www.linkedin.com/in/david-linkdin/" class="social-icon linkedin">LinkedIn</a>
-    <a href="https://github.com/David-DAM" class="social-icon github">GitHub</a>
-    <a href="https://discord.com/invite/kjeYDRzcZk" class="social-icon discord">Discord</a>
 </section>
-
-
-<section class="buttons">
-    <div class="button-box">
-        <a href="https://" class="button">NEWSLETTER DEVSUNDAY</a>
-    </div>
-    <div class="button-box">
-        <a href="" class="button">MIS PERIFÉRICOS</a>
-    </div>
-    <div class="button-box">
-        <a href="" class="button">ASESORÍAS</a>
-    </div>
-</section>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,9 +1,29 @@
 const CLIENT_ID = "Ov23liL6cpiFgu0g7Tcr";
-const REDIRECT_URI = "https://davinchicoder.dev/plantilla/";
+const REDIRECT_URI = window.location.uri + "/";
 const LAMBDA_URL = "https://ju5le5a56wdrtplwd4staw4nxi0uonvz.lambda-url.eu-west-3.on.aws/";
 
 const translations = {
-    "template": {
+    "home": {
+        "es": "INICIO",
+        "en": "HOME"
+    },
+    "templates": {
+        "es": "PLANTILLAS",
+        "en": "TEMPLATES"
+    },
+    "consultancies": {
+        "es": "ASESORÍAS",
+        "en": "CONSULTANCIES"
+    },
+    "newsletter": {
+        "es": "NEWSLETTER",
+        "en": "NEWSLETTER"
+    },
+    "gadgets": {
+        "es": "PERIFÉRICOS",
+        "en": "GADGETS"
+    },
+    "template_description": {
         "es": "Plantilla de Spring Boot Definitiva",
         "en": "Spring Boot Ultimate Template"
     },
@@ -44,13 +64,9 @@ const translations = {
 function changeLanguage(language) {
     let elements = document.querySelectorAll("[data-i18n]");
     sessionStorage.setItem("language", language);
-    elements.forEach(function (element) {
+    elements.forEach(element => {
         const key = element.getAttribute("data-i18n");
-        if (language === 'en') {
-            element.textContent = translations[key].en;
-        } else {
-            element.textContent = translations[key].es;
-        }
+        element.textContent = language === 'en' ? translations[key].en : translations[key].es;
     });
 }
 
