@@ -32,8 +32,8 @@ const translations = {
         "en": "This Spring Boot template includes essential tools such as Spring Security, JPA, PostgreSQL, and Redis to create robust and secure applications. It also includes a modular testing system and integration with Grafana Stack for monitoring."
     },
     "connect-github": {
-        "es": "Conectar con GitHub",
-        "en": "Connect with GitHub"
+        "es": `<i class="fab fa-github"></i> CONECTAR`,
+        "en": `<i class="fab fa-github"></i> CONNECT`
     },
     "proceed-payment": {
         "es": "Autentícate con tu cuenta de GitHub para proceder con el pago de la plantilla. ¡Es rápido y sencillo!",
@@ -66,7 +66,7 @@ function changeLanguage(language) {
     sessionStorage.setItem("language", language);
     elements.forEach(element => {
         const key = element.getAttribute("data-i18n");
-        element.textContent = language === 'en' ? translations[key].en : translations[key].es;
+        element.innerHTML = language === 'en' ? translations[key].en : translations[key].es;
     });
 }
 

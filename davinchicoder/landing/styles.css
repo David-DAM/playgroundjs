@@ -1,9 +1,10 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #111;
+    background: radial-gradient(circle at center, #243b65 40%, #0d0d0d 100%) no-repeat fixed;
     color: #fff;
 }
+
 
 .hero {
     text-align: center;
@@ -18,7 +19,6 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-content {
@@ -66,28 +66,31 @@ p {
     filter: invert(100%);
 }
 
+.socials img:hover {
+    transform: scale(1.05);
+}
+
 .buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
     margin-top: 2rem;
 }
 
 .buttons a {
-    background-color: #222;
-    border: 1px solid #444;
-    padding: 1rem 2rem;
+    background-color: #000000;
     color: white;
     text-decoration: none;
-    border-radius: 10px;
-    width: 250px;
-    text-align: center;
-    transition: background 0.3s;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .buttons a:hover {
-    background-color: #333;
+    /*background-color: #3a5b9a;*/
+    transform: scale(1.05);
 }
 
 .flag {

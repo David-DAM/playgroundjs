@@ -1,10 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesorías | DavinchiCoder</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<header>
+    <div class="logo">
+        <a href="https://davinchicoder">DavinchiCoder</a>
+    </div>
 
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav-links" id="nav">
+        <a href="https://davinchicoder">INICIO</a>
+        <a href="https://davinchicoder/templates">PLANTILLAS</a>
+        <a href="https://davinchicoder/consultancies">ASESORÍAS</a>
+        <a href="https://davinchicoder/newsletter">NEWSLETTER</a>
+        <a href="https://davinchicoder/gadgets">PERIFÉRICOS</a>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1280px-Flag_of_Spain.svg.png"
+             alt="Español" class="flag" onclick="changeLanguage('es')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
+             alt="English" class="flag" onclick="changeLanguage('en')">
+    </nav>
+</header>
+
+<main class="container">
+    <h1>🚀 Asesorías 1:1</h1>
+    <p>
+        ¿Quieres mejorar tu perfil como desarrollador backend, conseguir un mejor trabajo o simplemente resolver tus
+        dudas técnicas?
+        En estas asesorías personalizadas trabajaremos <strong>uno a uno</strong> para ayudarte a lograrlo.
+    </p>
+
+    <ul class="benefits">
+        <li>✅ Mejora de CV y perfil de LinkedIn</li>
+        <li>✅ Revisión técnica de tus proyectos</li>
+        <li>✅ Simulacros de entrevistas técnicas</li>
+        <li>✅ Estrategia para entrar en grandes empresas</li>
+        <li>✅ Todo adaptado a tu nivel y objetivos</li>
+    </ul>
+
+    <div class="cta">
+        <a href="https://buy.stripe.com/5kA5oZ14R1KE3X27ss" target="_blank" rel="noopener noreferrer">
+            RESERVAR ASESORÍA
+        </a>
+    </div>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,9 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background: linear-gradient(45deg, #0a74da, #3b8d99, #2c3e50);
-    background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
-    font-family: Arial, sans-serif;
-    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(circle at center, #243b65 40%, #0d0d0d 100%) no-repeat fixed;
+    color: #fff;
 }
 
 header {
