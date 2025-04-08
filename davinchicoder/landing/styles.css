@@ -89,7 +89,6 @@ p {
 }
 
 .buttons a:hover {
-    /*background-color: #3a5b9a;*/
     transform: scale(1.05);
 }
 

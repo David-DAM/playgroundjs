@@ -68,7 +68,6 @@ header {
     transition: 0.3s;
 }
 
-/* Centrado vertical y horizontal */
 .center-wrapper {
     flex: 1;
     display: flex;

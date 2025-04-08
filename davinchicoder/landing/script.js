@@ -21,6 +21,10 @@ const translations = {
     },
 };
 
+if (sessionStorage.getItem("language")) {
+    changeLanguage(sessionStorage.getItem("language"));
+}
+
 function changeLanguage(language) {
     let elements = document.querySelectorAll("[data-i18n]");
     sessionStorage.setItem("language", language);

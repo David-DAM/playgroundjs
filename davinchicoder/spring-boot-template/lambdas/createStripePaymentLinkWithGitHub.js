@@ -8,7 +8,7 @@ const PRODUCT_ID_ES = process.env.PRODUCT_ID_ES;
 
 exports.handler = async (event) => {
     try {
-        
+
         const body = JSON.parse(event.body);
         const code = body.code;
         const userLanguage = body.language ?? "es";
@@ -50,7 +50,7 @@ exports.handler = async (event) => {
             metadata: {githubUsername: githubUsername},
             after_completion: {
                 type: "redirect",
-                redirect: {url: `https://davinchicoder.dev/gracias/?user=${githubUsername}&language=${userLanguage}`}
+                redirect: {url: `https://davinchicoder.dev/thanks/?user=${githubUsername}&language=${userLanguage}`}
             },
             allow_promotion_codes: true,
         });

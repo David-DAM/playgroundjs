@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Periféricos | DavinchiCoder</title>
+    <title data-i18n="title">Periféricos | DavinchiCoder</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,11 +19,11 @@
     </div>
 
     <nav class="nav-links" id="nav">
-        <a href="https://davinchicoder">INICIO</a>
-        <a href="https://davinchicoder/templates">PLANTILLAS</a>
-        <a href="https://davinchicoder/consultancies">ASESORÍAS</a>
-        <a href="https://davinchicoder/newsletter">NEWSLETTER</a>
-        <a href="https://davinchicoder/gadgets">PERIFÉRICOS</a>
+        <a data-i18n="home" href="https://davinchicoder">INICIO</a>
+        <a data-i18n="templates" href="https://davinchicoder/templates">PLANTILLAS</a>
+        <a data-i18n="consultancies" href="https://davinchicoder/consultancies">ASESORÍAS</a>
+        <a data-i18n="newsletter" href="https://davinchicoder/newsletter">NEWSLETTER</a>
+        <a data-i18n="gadgets" href="https://davinchicoder/gadgets">PERIFÉRICOS</a>
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1280px-Flag_of_Spain.svg.png"
              alt="Español" class="flag" onclick="changeLanguage('es')">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
@@ -32,36 +32,70 @@
 </header>
 
 <main class="container">
-    <h1>🖥️ Mis periféricos favoritos</h1>
-    <p>Los periféricos que uso y recomiendo para programar, estudiar y crear contenido. Todos probados
-        personalmente.</p>
+    <h1 data-i18n="my_gadgets">🖥️ Mis periféricos favoritos</h1>
+    <p data-i18n="description">Los periféricos que uso y recomiendo para programar, estudiar y crear contenido. Todos
+        probados personalmente.</p>
 
     <div class="product-grid">
-        <!-- Producto 1 -->
+
         <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_SL1500_.jpg" alt="Teclado Logitech MX Keys">
-            <h2>Logitech MX Keys</h2>
-            <p>Un teclado silencioso, cómodo y con gran autonomía. Perfecto para escribir durante horas.</p>
-            <a href="https://www.amazon.es/dp/B07W7JHH48?tag=tu-afiliado" target="_blank" class="buy-btn">Comprar en
-                Amazon</a>
+            <img src="https://m.media-amazon.com/images/I/61U-L2mrlRL._AC_SL1500_.jpg" alt="Teclado Logitech MX Keys">
+            <h2>Logitech K120</h2>
+            <p data-i18n="keyboard">Un teclado silencioso, cómodo y con gran autonomía. Perfecto para
+                escribir durante horas.</p>
+            <a data-i18n="buy" href="https://amzn.to/41kpXPx" target="_blank"
+               class="buy-btn">COMPRAR EN
+                AMAZON</a>
         </div>
 
-        <!-- Producto 2 -->
         <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71U3brbs1UL._AC_SL1500_.jpg" alt="Ratón Logitech MX Master 3">
-            <h2>Logitech MX Master 3</h2>
-            <p>Ratón ergonómico con botones programables y scroll infinito. Ideal para productividad.</p>
-            <a href="https://www.amazon.es/dp/B07W6JG6Z9?tag=tu-afiliado" target="_blank" class="buy-btn">Comprar en
-                Amazon</a>
+            <img src="https://m.media-amazon.com/images/I/511F0sut0lL._AC_SL1000_.jpg" alt="Ratón Logitech MX Master 3">
+            <h2>Mars Gaming MM218</h2>
+            <p data-i18n="mouse">Ratón ergonómico con botones programables y scroll infinito. Ideal para
+                productividad.</p>
+            <a data-i18n="buy" href="https://amzn.to/3Xo3mQK" target="_blank"
+               class="buy-btn">COMPRAR EN
+                AMAZON</a>
         </div>
 
-        <!-- Producto 3 -->
         <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61ZySKTNRzL._AC_SL1500_.jpg" alt="Monitor LG UltraWide">
-            <h2>Monitor LG UltraWide 34”</h2>
-            <p>Pantalla ultra panorámica con resolución 2K para tener código, consola y docs a la vez.</p>
-            <a href="https://www.amazon.es/dp/B08HRPYV1P?tag=tu-afiliado" target="_blank" class="buy-btn">Comprar en
-                Amazon</a>
+            <img src="https://m.media-amazon.com/images/I/619lma3QEsL._AC_SL1200_.jpg" alt="Monitor LG UltraWide">
+            <h2>BenQ GW2490E 24”</h2>
+            <p data-i18n="monitor">Pantalla ultra panorámica con resolución 2K para tener código, consola y docs a la
+                vez.</p>
+            <a data-i18n="buy" href="https://amzn.to/4kk9gwa" target="_blank"
+               class="buy-btn">COMPRAR EN
+                AMAZON</a>
+        </div>
+
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/61YaEtd+coL._AC_SL1500_.jpg" alt="Teclado Logitech MX Keys">
+            <h2>Webcam Trust Gaming GXT 1160 Vero</h2>
+            <p data-i18n="webcam">Webcam Full HD con micrófono integrado, ideal para videollamadas, streaming y
+                contenido profesional.</p>
+            <a data-i18n="buy" href="https://amzn.to/41A0H9o" target="_blank"
+               class="buy-btn">COMPRAR EN
+                AMAZON</a>
+        </div>
+
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/91INvP0IG1L._AC_SL1500_.jpg" alt="Ratón Logitech MX Master 3">
+            <h2>Woxter Big Bass 95 RGB</h2>
+            <p data-i18n="speakers">Ratón ergonómico con botones programables y scroll infinito. Ideal para
+                productividad.</p>
+            <a data-i18n="buy" href="https://amzn.to/4ibPSjg" target="_blank"
+               class="buy-btn">COMPRAR EN
+                AMAZON</a>
+        </div>
+
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/61jN35sc4jS._AC_SL1000_.jpg" alt="Monitor LG UltraWide">
+            <h2>Gigabyte NVIDIA GeForce RTX 3060</h2>
+            <p data-i18n="graphic">Pantalla ultra panorámica con resolución 2K para tener código, consola y
+                docs a la vez.</p>
+            <a data-i18n="buy" href="https://amzn.to/4ifMDak" target="_blank"
+               class="buy-btn">COMPRAR EN
+                AMAZON</a>
         </div>
     </div>
 </main>
