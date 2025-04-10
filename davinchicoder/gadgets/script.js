@@ -60,21 +60,3 @@ const translations = {
         "en": "Graphic card with 12 GB of memory, Ray Tracing and DLSS for realistic graphics and optimized performance"
     },
 };
-
-if (sessionStorage.getItem("language")) {
-    changeLanguage(sessionStorage.getItem("language"));
-}
-
-function changeLanguage(language) {
-    let elements = document.querySelectorAll("[data-i18n]");
-    sessionStorage.setItem("language", language);
-    elements.forEach(element => {
-        const key = element.getAttribute("data-i18n");
-        element.innerHTML = language === 'en' ? translations[key].en : translations[key].es;
-    });
-}
-
-function toggleMenu() {
-    const nav = document.getElementById('nav');
-    nav.classList.toggle('show');
-}

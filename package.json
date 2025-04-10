@@ -2,7 +2,7 @@
   "name": "playgroundjs",
   "version": "1.0.0",
   "description": "",
-  "main": "davinchicoder/spring-boot-template/landing/script.js",
+  "main": "davinchicoder/spring-boot-template/script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

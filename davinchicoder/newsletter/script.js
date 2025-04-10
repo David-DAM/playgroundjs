@@ -19,33 +19,27 @@ const translations = {
         "es": "PERIFÉRICOS",
         "en": "GADGETS"
     },
-    "description": {
-        "es": "Recibe cada domingo lo mejor del mundo tech, herramientas brutales, recursos, recomendaciones y más. 100% útil, 0% spam.",
-        "en": "Receive the best of the tech world every Sunday, including awesome tools, resources, recommendations, and more.100% helpful, 0% spam."
-    },
     "click_here": {
         "es": "MOSTRAR FORMULARIO",
         "en": "SHOW FORM"
     },
+    "sunday": {
+        "es": "✅ Cada domingo, lo más potente del mundo tech",
+        "en": "✅ Every Sunday, the most powerful in the tech world"
+    },
+    "utilities": {
+        "es": "✅ Herramientas útiles que usarás de verdad",
+        "en": "✅ Useful tools that you will really use"
+    },
+    "recomendations": {
+        "es": "✅ Recursos y recomendaciones que te hacen mejor dev",
+        "en": "✅ Resources and recommendations that make you a better dev"
+    },
+    "value": {
+        "es": "✅ 100% valor, 0% humo",
+        "en": "✅ 100% value, 0% smoke"
+    },
 };
-
-if (sessionStorage.getItem("language")) {
-    changeLanguage(sessionStorage.getItem("language"));
-}
-
-function changeLanguage(language) {
-    let elements = document.querySelectorAll("[data-i18n]");
-    sessionStorage.setItem("language", language);
-    elements.forEach(element => {
-        const key = element.getAttribute("data-i18n");
-        element.textContent = language === 'en' ? translations[key].en : translations[key].es;
-    });
-}
-
-function toggleMenu() {
-    const nav = document.getElementById("nav");
-    nav.classList.toggle("show");
-}
 
 (function (w, d, e, u, f, l, n) {
     w[f] = w[f] || function () {

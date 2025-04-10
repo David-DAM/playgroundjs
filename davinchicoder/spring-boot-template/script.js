@@ -27,10 +27,6 @@ const translations = {
         "es": "Plantilla de Spring Boot Definitiva",
         "en": "Spring Boot Ultimate Template"
     },
-    "description": {
-        "es": "Esta plantilla de Spring Boot incluye herramientas esenciales como Spring Security, JPA, PostgreSQL y Redis para crear aplicaciones robustas y seguras. También incluye un sistema de pruebas modular y una configuración de integración con Grafana Stack para monitoreo.",
-        "en": "This Spring Boot template includes essential tools such as Spring Security, JPA, PostgreSQL, and Redis to create robust and secure applications. It also includes a modular testing system and integration with Grafana Stack for monitoring."
-    },
     "connect-github": {
         "es": `<i class="fab fa-github"></i> CONECTAR`,
         "en": `<i class="fab fa-github"></i> CONNECT`
@@ -59,20 +55,47 @@ const translations = {
         "es": "Autenticando...",
         "en": "Authenticating..."
     },
+    "info": {
+        "es": "Esta plantilla de Spring Boot es una base preconfigurada, robusta y segura para construir aplicaciones modernas. Incluye:",
+        "en": "This Spring Boot template is a pre-configured, robust, and secure base for building modern applications. It includes:"
+    },
+    "cli": {
+        "es": `✅ <strong>Aplicación de terminal</strong> para autogenerarte código en otros proyectos de Spring Boot`,
+        "en": `✅ <strong>Terminal application</strong> to auto-generate code in other Spring Boot projects`
+    },
+    "security": {
+        "es": `✅ <strong>Spring Security</strong> para protección avanzada con JWT`,
+        "en": `✅ <strong>Spring Security</strong> for advanced protection with JWT`
+    },
+    "database": {
+        "es": `✅ <strong>Spring Data JPA</strong> para manejo eficiente de bases de datos como PostgreSQL o MySQL`,
+        "en": `✅ <strong>Spring Data JPA</strong> for efficient database management like PostgreSQL or MySQL`
+    },
+    "cache": {
+        "es": `✅ <strong>Redis</strong> para manejo de caché`,
+        "en": `✅ <strong>Redis</strong> for cache management`
+    },
+    "kafka": {
+        "es": `✅ <strong>Kafka</strong> para mensajería asíncrona`,
+        "en": `✅ <strong>Kafka</strong> for asynchronous messaging`
+    },
+    "grafana": {
+        "es": `✅ <strong>Grafana Stack</strong> para monitoreo de rendimiento`,
+        "en": `✅ <strong>Grafana Stack</strong> for performance monitoring`
+    },
+    "testing": {
+        "es": `✅ <strong>Test unitarios y de integración</strong> para un desarrollo ágil y eficiente`,
+        "en": `✅ <strong>Unit and integration tests</strong> for agile and efficient development`
+    },
+    "documentation": {
+        "es": `✅ <strong>OpenAPI con Swagger</strong> para mostrar fácilmente la documentación de tu API`,
+        "en": `✅ <strong>OpenAPI with Swagger</strong> to easily display your API documentation`
+    },
+    "utilities": {
+        "es": `✅ <strong>Múltiples funciones de utilidad</strong> como Mapstruct, Spring Devtools, Lombok y más`,
+        "en": `✅ <strong>Multiple utility functions</strong> like Mapstruct, Spring Devtools, Lombok and more`
+    },
 };
-
-if (sessionStorage.getItem("language")) {
-    changeLanguage(sessionStorage.getItem("language"));
-}
-
-function changeLanguage(language) {
-    let elements = document.querySelectorAll("[data-i18n]");
-    sessionStorage.setItem("language", language);
-    elements.forEach(element => {
-        const key = element.getAttribute("data-i18n");
-        element.innerHTML = language === 'en' ? translations[key].en : translations[key].es;
-    });
-}
 
 function connectToGitHub() {
     let language = sessionStorage.getItem("language") ?? "es";
@@ -112,7 +135,7 @@ if (codeFromUrl) {
     let language = sessionStorage.getItem("language") ?? "es";
     document.getElementById("github-button").visibility = "hidden";
     document.getElementById("status").innerText = translations.authenticating[language];
-    redirectToPaymentLink(codeFromUrl);
+    await redirectToPaymentLink(codeFromUrl);
 }
 
 
