@@ -31,6 +31,10 @@ const translations = {
         "es": "🚀 Asesorías 1:1",
         "en": "🚀 Consultancies 1:1"
     },
+    "access": {
+        "es": "✅ Acceso a mi plataforma DevHub con contenido de calidad",
+        "en": "✅ Access to my DevHub platform with quality content"
+    },
     "upgrade": {
         "es": "✅ Mejora de CV y perfil de LinkedIn",
         "en": "✅ CV and LinkedIn profile improvement"
