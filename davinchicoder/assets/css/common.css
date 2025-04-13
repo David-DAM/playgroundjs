@@ -22,6 +22,7 @@ header {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    margin-left: auto;
 }
 
 .menu-toggle span {
@@ -81,18 +82,19 @@ body {
     line-height: 1.6;
 }
 
-
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
     }
 
     .menu-toggle {
         display: flex;
-        margin-top: 1rem;
+        margin-top: 0;
         align-items: center;
         justify-content: center;
+        margin-left: auto;
     }
 
     .nav-links {

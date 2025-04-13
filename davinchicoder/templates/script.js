@@ -1,7 +1,3 @@
-const CLIENT_ID = "Ov23liL6cpiFgu0g7Tcr";
-const REDIRECT_URI = window.location.uri + "/";
-const LAMBDA_URL = "https://ju5le5a56wdrtplwd4staw4nxi0uonvz.lambda-url.eu-west-3.on.aws/";
-
 const translations = {
     "home": {
         "es": "INICIO",
@@ -96,6 +92,10 @@ const translations = {
         "en": `✅ <strong>Multiple utility functions</strong> like Mapstruct, Spring Devtools, Lombok and more`
     },
 };
+const CLIENT_ID = "Ov23liL6cpiFgu0g7Tcr";
+const REDIRECT_URI = window.location;
+
+const LAMBDA_URL = "https://ju5le5a56wdrtplwd4staw4nxi0uonvz.lambda-url.eu-west-3.on.aws/";
 
 function connectToGitHub() {
     let language = sessionStorage.getItem("language") ?? "es";
@@ -135,7 +135,7 @@ if (codeFromUrl) {
     let language = sessionStorage.getItem("language") ?? "es";
     document.getElementById("github-button").visibility = "hidden";
     document.getElementById("status").innerText = translations.authenticating[language];
-    await redirectToPaymentLink(codeFromUrl);
+    redirectToPaymentLink(codeFromUrl);
 }
 
 
