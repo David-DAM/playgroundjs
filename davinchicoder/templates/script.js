@@ -71,10 +71,6 @@ const translations = {
         "es": `✅ <strong>Redis</strong> para manejo de caché`,
         "en": `✅ <strong>Redis</strong> for cache management`
     },
-    "kafka": {
-        "es": `✅ <strong>Kafka</strong> para mensajería asíncrona`,
-        "en": `✅ <strong>Kafka</strong> for asynchronous messaging`
-    },
     "grafana": {
         "es": `✅ <strong>Grafana Stack</strong> para monitoreo de rendimiento`,
         "en": `✅ <strong>Grafana Stack</strong> for performance monitoring`
@@ -93,7 +89,7 @@ const translations = {
     },
 };
 const CLIENT_ID = "Ov23liL6cpiFgu0g7Tcr";
-const REDIRECT_URI = window.location;
+const REDIRECT_URI = "https://davinchicoder.dev/templates/";
 
 const LAMBDA_URL = "https://ju5le5a56wdrtplwd4staw4nxi0uonvz.lambda-url.eu-west-3.on.aws/";
 
@@ -119,11 +115,11 @@ async function redirectToPaymentLink(code) {
             window.location.href = data.payment_link;
         } else {
             document.getElementById("status").innerText = translations["fail-generate-payment"][language];
-            document.getElementById("github-button").visibility = "visible";
+            document.getElementById("github-button").style.visibility = "visible";
         }
     } catch (error) {
         document.getElementById("status").innerText = translations["error-generate-payment"][language];
-        document.getElementById("github-button").visibility = "visible";
+        document.getElementById("github-button").style.visibility = "visible";
         console.error(error);
     }
 }
@@ -133,7 +129,7 @@ const codeFromUrl = urlParams.get("code");
 
 if (codeFromUrl) {
     let language = sessionStorage.getItem("language") ?? "es";
-    document.getElementById("github-button").visibility = "hidden";
+    document.getElementById("github-button").style.visibility = "hidden";
     document.getElementById("status").innerText = translations.authenticating[language];
     redirectToPaymentLink(codeFromUrl);
 }

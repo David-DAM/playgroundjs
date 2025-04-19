@@ -57,8 +57,6 @@
             </li>
             <li data-i18n="cache">✅ <strong>Redis</strong> para manejo de caché
             </li>
-            <li data-i18n="kafka">✅ <strong>Kafka</strong> para mensajería asíncrona
-            </li>
             <li data-i18n="grafana">✅ <strong>Grafana Stack</strong> para monitoreo de rendimiento
             </li>
             <li data-i18n="testing">✅ <strong>Test unitarios y de integración</strong> para un desarrollo ágil y
@@ -80,7 +78,8 @@
             <p data-i18n="connect-github" style="font-size: 1.25rem; font-weight: bold;">Conectar con GitHub</p>
             <p data-i18n="proceed-payment">Autentícate con tu cuenta de GitHub para proceder con el pago de la
                 plantilla. ¡Es rápido y sencillo!</p>
-            <button data-i18n="connect-github" onclick="connectToGitHub()" class="button"><i class="fab fa-github"></i>
+            <button id="github-button" data-i18n="connect-github" onclick="connectToGitHub()" class="button"><i
+                    class="fab fa-github"></i>
                 CONECTAR
             </button>
         </div>
