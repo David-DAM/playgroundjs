@@ -45,14 +45,14 @@ exports.handler = async (event) => {
 
         const selectedProductId = userLanguage === "es" ? PRODUCT_ID_ES : PRODUCT_ID_EN;
 
-        const paymentLink = await stripe.paymentLinks.create({
+        const session = await stripe.checkout.sessions.create({
             line_items: [{price: selectedProductId, quantity: 1}],
+            mode: "payment",
             metadata: {githubUsername: githubUsername},
-            after_completion: {
-                type: "redirect",
-                redirect: {url: `https://davinchicoder.dev/thanks/?user=${githubUsername}&language=${userLanguage}`}
-            },
+            discounts: [],
             allow_promotion_codes: true,
+            success_url: `https://davinchicoder.dev/thanks/?user=${githubUsername}&language=${userLanguage}`,
+            cancel_url: `https://davinchicoder.dev/cancelled`,
         });
 
         return {
@@ -60,7 +60,7 @@ exports.handler = async (event) => {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({payment_link: paymentLink.url})
+            body: JSON.stringify({payment_link: session.url})
         };
     } catch (error) {
         console.error("Error en la Lambda:", error);
